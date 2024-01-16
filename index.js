@@ -1,3 +1,13 @@
+let clicks = document.querySelectorAll("button")
+
+clicks.forEach((click) => {
+
+    click.addEventListener("click", function () {
+
+        playSound(this.innerText)
+
+    })
+})
 
 window.addEventListener("keypress", function (event) {
     let key = event.key.toUpperCase()
@@ -12,27 +22,6 @@ function show(key) {
     }, 200);
 
 }
-function show2(key) {
-    let esp = document.querySelector(".esp")
-    esp.classList.add("play")
-    setTimeout(() => {
-        esp.classList.remove("play")
-    }, 100);
-}
-
-
-let clicks = document.querySelectorAll("button")
-
-clicks.forEach((click) => {
-
-    click.addEventListener("click", function () {
-
-        playSound(this.innerText)
-
-    })
-})
-
-
 
 
 function playSound(key) {
